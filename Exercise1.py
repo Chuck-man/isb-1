@@ -11,12 +11,22 @@ def encryption(file: str):
                 if j in alphabet:
                     text.append(dec_alphabet[finding])
                 else:
-                    text.append(i)
+                    text.append(j)
     
     res_file = open('result_text.txt', 'w')
     for symbol in text:
         res_file.write(symbol)
     res_file.close()
+
+    new_file = open('Key.txt', 'w')
+    new_file.write("Алфавит: ")
+    for letter1 in alphabet:
+        new_file.write(letter1)
+    new_file.write("\n")      
+    new_file.write("Ключ: ")
+    for letter in dec_alphabet:
+        new_file.write(letter)
+    
 
 if __name__ == "__main__":
     encryption("text.txt")
