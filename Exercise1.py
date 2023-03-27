@@ -12,4 +12,11 @@ def encryption(file: str):
                     text.append(dec_alphabet[finding])
                 else:
                     text.append(i)
-                    
+    
+    res_file = open('result_text.txt', 'w')
+    for symbol in text:
+        res_file.write(symbol)
+    res_file.close()
+
+if __name__ == "__main__":
+    encryption("text.txt")
