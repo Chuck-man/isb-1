@@ -13,12 +13,12 @@ def encryption(file: str):
                 else:
                     text.append(j)
     
-    res_file = open('result_text.txt', 'w')
+    res_file = open('result_text.txt', 'w', encoding="utf-8")
     for symbol in text:
         res_file.write(symbol)
     res_file.close()
 
-    new_file = open('Key.txt', 'w')
+    new_file = open('Key.txt', 'w', encoding="utf-8")
     new_file.write("Алфавит: ")
     for letter1 in alphabet:
         new_file.write(letter1)
